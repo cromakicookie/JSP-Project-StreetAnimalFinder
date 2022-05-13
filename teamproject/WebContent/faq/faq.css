@@ -239,6 +239,7 @@ h6 {
 /* 내용박스 div 레이아웃 7 질문 */
 .g-brd-bottom {
   border-bottom: solid 1px transparent !important;
+  margin: 30px;
 }
 
 .g-brd-gray-light-v4 {
@@ -253,6 +254,17 @@ h6 {
   font-size: 1.07rem;
   font-weight: 500;
   margin-top: 0;
+}
+
+.content-title {
+
+}
+
+.content {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .g-px-30 {
@@ -270,45 +282,13 @@ h6 {
 }
 
 /* 레이아웃 7 효과 */
+.content-wrap {
 
-@keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -30px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
 }
 
-details {
-  padding-left: 2.14286rem !important;
+.d-flex {
+  
 }
-
-summary {
-  cursor: pointer;
-  outline: none;
-}
-
-details > summary {
-  outline: 0;
-  text-align: left;
-}
-
-details[open] > summary ~ * {
-  animation: reveal 0.5s;
-}
-
-details > summary ~ * {
-  animation: reveal 0.5s;
-}
-
-details summary::-webkit-details-marker {
-  font-size: 20px;
-  margin-right: 5px;
-}
-
 /* .tpt {
   line-height: 25px;
   border-radius: 5px;
