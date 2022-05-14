@@ -137,7 +137,8 @@ ul {
     padding-inline-start: px;
 }
 
-.header {
+.header-menu ul {
+    justify-content: space-evenly !important;
 }
 
 .header-logo {
