@@ -6,16 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css">
     <title>main</title>
-    <script type="text/javascript">
-        function view(opt) {
-          if(opt) {
-               spec1.style.display = "block";
-          }
-          else {
-              spec1.style.display = "none";  //마우스아웃시 닫힘
-          }
-        }
-        </script>
   </head>
   <body>
     <header
@@ -49,6 +39,7 @@
                   <li class="list-inline-item g-color-topbar">|</li>
                   <li class="list-inline-item"><a class="g-color-topbar" href="">마이페이지</a></li>
                 </ul>
+
               </div>
             </div>
           </div>
@@ -64,50 +55,52 @@
       <div class="header-logo">
         <img src="logo.svg" style="width: 240px; height: 60px;" alt="" class="logo">
       </div>
-
       <!-- 목차 -->
-      <div class="header-menu" style="margin-left: 321px;" data-animaion-in="fadeIn" data-animation-out="fadeOut">
-        <ul>
+      <div class="header-menu mouseover" style="margin-left: 321px;" data-animaion-in="fadeIn" data-animation-out="fadeOut">
+        <ul class="mouseover">
           <li class="list-inline-header">
-            <a href="" onmouseover="view(true)" onmouseout="view(false)" style="text-decoration:none; ">소개</a>
+            <a href=""style="text-decoration:none; ">소개</a>
           </li>
           <li class="list-inline-header">
-            <a href="" onmouseover="view(true)" onmouseout="view(false)" style="text-decoration:none; ">실종동물찾기</a>
+            <a href=""style="text-decoration:none; ">실종동물찾기</a>
+            <ul class=" mouseover showmenu list-drop">
+              <li class="hide-list"><a  class="drop-a"href="">동물 등록하기</a></li>
+              <li class="hide-list"><a  class="drop-a"href="">동물 / 주인 찾기</a></li>
+            </ul>
           </li>
           <li class="list-inline-header">
-            <a href="" onmouseover="view(true)" onmouseout="view(false)" style="text-decoration:none; ">전문가FAQ</a>
+            <a href=""style="text-decoration:none; ">전문가FAQ</a>
           </li>
           <li class="list-inline-header">
-            <a href="" onmouseover="view(true)" onmouseout="view(false)" style="text-decoration:none; ">커뮤니티</a>
+            <a href=""style="text-decoration:none; ">커뮤니티</a>
+            <ul class="mouseover showmenu list-drop">
+              <li class="hide-list"><a  class="drop-a"href="">소통해요</a></li>
+              <li class="hide-list"><a  class="drop-a"href="">스애파 후기</a></li>
+            </ul>
           </li>
         </ul>
+        </div>
       </div>
+    <div class="lnb-bg showmenu">
     </div>
+</header>
+<img src="logo.svg" alt="">
 
-      
-      <!-- 드롭다운 hidden 레이아웃 1-3 -->
-      <div  id="spec1" class="container container-header header justyfy-content-between dropdown">
-        <div class="header-logo" style="width: 240px; height: 39px;">
-          </div>
-    
-          <div class="header-menu dropdown" style="position:relative;display:none;">
-          <div class="drop-div" style="margin-left: 321px;" data-animaion-in="fadeIn" data-animation-out="fadeOut">
-          <li class="drop-li"><a href=""></a></li>
-         </div>
-         <div class="drop-div">
-            <li class="drop-li"><a href="">동물 등록하기</a></li>
-            <li class="drop-li"><a href="">동물 / 주인찾기</a></li>
-           </div>
-           <div class="drop-div">
-            <li class="drop-li"><a href=""></a></li>
-           </div>
-           <div class="drop-div">
-              <li class="drop-li"><a href="">소통해요</a></li>
-              <li class="drop-li"><a href="">후기</a></li>
-             </div>
-      </div>
-    </div>
 
-    </header>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+          $(function() {
+              $('.showmenu').hide();
+              $('.mouseover').hover(function() {
+                  $('.showmenu').slideToggle(0.1);
+              }
+         //     , function() {
+          //      $('.showmenu').slideUp(1);
+         //   }
+              );
+           });
+      });
+      </script>
   </body>
 </html>
