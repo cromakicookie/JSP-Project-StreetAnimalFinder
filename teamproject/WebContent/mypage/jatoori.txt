@@ -1,0 +1,40 @@
+<tr class="modi-table-tr">
+                                <th class="modi-table-th">
+                                    <span class="col1-sp">생년월일</span>
+                                </th>
+                                <td class="modi-table-td">
+                                    <div div class="modi-item">
+                                        <select name="ybirth" id="_ybirth" class="sel-con">
+                                            <option value>선택</option>
+                                            <option value="2022">2022</option>
+                                        </select> 년 &nbsp;&nbsp;
+                                        <select name="mbirth" id="_mbirth" class="sel-con">
+                                            <option value>선택</option>
+                                            <option value="01">01</option>
+                                        </select> 월 &nbsp;&nbsp;
+                                        <select name="dbirth" id="_dbirth" class="sel-con">
+                                            <option value>선택</option>
+                                            <option value="01">01</option>
+                                        </select> 일 &nbsp;&nbsp;
+                                        <div>
+                                            <table class="cal-type">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input type="radio" name="caltype" checked="checked" id="caltype1">
+                                                            <label for="caltype1">양력</label>
+                                                        </td>
+                                                        <td>
+                                                            <input type="radio" name="caltype" id="caltype0">
+                                                            <label for="caltype0">음력</label>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="div_info_maroon">
+                                        <span class="setSubTextColor"></span>
+                                    </div>
+                                </td>
+                            </tr>
