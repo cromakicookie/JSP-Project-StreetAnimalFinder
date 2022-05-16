@@ -365,14 +365,15 @@ h6 {
 }
 
 .my-4 {
-    margin-top: 3rem!important;
-    margin-bottom: 3rem!important;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
 }
 
 hr {
     border: 0;
     border-top: 1px solid #e7eaf3;
 }
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -390,6 +391,8 @@ p {
 .dzsparallaxer:not(.mode-oneelement)>div {
     position: relative;
 }
+
+
 
 .dzsparallaxer.height-is-based-on-content>div {
     position: relative;
@@ -431,7 +434,8 @@ p {
     color: #8c98a4 !important;
 }
 
-.form-control, .form-control:focus {
+.form-control,
+.form-control:focus {
     color: #555;
 }
 
@@ -452,7 +456,7 @@ p {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .form-control {
@@ -468,7 +472,7 @@ p {
     padding: 0.5rem 1.14286rem !important;
     border-color: #ddd !important;
     border-radius: 50px !important;
-    
+
 }
 
 ul {
@@ -481,11 +485,13 @@ ul {
     padding-inline-start: 40px;
 }
 
-.space-1, .space-bottom-1 {
+.space-1,
+.space-bottom-1 {
     padding-bottom: 2rem !important;
 }
 
-.space-1, .space-top-1 {
+.space-1,
+.space-top-1 {
     padding-top: 2rem !important;
 }
 
@@ -535,7 +541,8 @@ li {
         max-width: 960px;
     }
 
-    .mb-lg-0, .my-lg-0 {
+    .mb-lg-0,
+    .my-lg-0 {
         margin-bottom: 0 !important;
     }
 
@@ -660,8 +667,9 @@ element.style {
     border-radius: 4 !important;
 }
 
-.mb-5, .my-5 {
-    margin-bottom: 3rem!important;
+.mb-5,
+.my-5 {
+    margin-bottom: 3rem !important;
 }
 
 .pb-1,
@@ -798,3 +806,52 @@ element.style {
     background-position: center center;
 }
 
+
+button {
+    background-color: #F9B514;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .modalBox {
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+    height: auto;
+    padding: 15px;
+    margin-right: 76px;
+    border-radius: 4px;
+  }
+
+  .modalBox button {
+    
+    width: 110px;
+    margin: 0 auto;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .conter {
+    display: flex;
+    justify-content: space-around;
+}

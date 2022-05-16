@@ -3,6 +3,14 @@
 
 <head>
     <link rel="stylesheet" href="LostPet.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#headers").load("/teamproject/WebContent/header/header.html");  // 원하는 파일 경로를 삽입하면 된다
+            $("#footer").load("/teamproject/WebContent/main/footer.html");
+        });
+    </script>
 </head>
 
 <body>
@@ -98,11 +106,10 @@
 
                         <div class="g-mt-10">
                             <!--버튼 -->
-                            <a href="" target="_blink"><button
-                                    class="btn btn-block btn-primary detail_adopt_application_event" type="button">주인 /
-                                    발견
-                                    신고하기</button></a>
 
+                            <button class="btn btn-block btn-primary openBtn" type="button">주인 /
+                                발견
+                                신고하기</button>
 
                         </div>
 
@@ -115,10 +122,11 @@
                 <h2 class="h5 text-dark font-weight-bold mb-3">설명</h2>
                 <div class="row shadow-sm">
                     <div class="content te p-0">
-                        <img class="img" src="/file/getBlob/23490.png" style="height: 350px; width: 350px;">
+                        <img class="img" src="/teamproject/WebContent/file/getBlob/23490.png"
+                            style="height: 350px; width: 350px;">
                         <br>역삼역 2번 출구에서 사람 얼굴을 확인하고 다니고 있는 것을 보호했습니다. <br>
                         사람을 좋아해서 안 가리고 꼬리를 흔들던데... 목걸이도 하고 있는 걸 보니 주인이 계신것 같아서요
-                        <br> 한번 올려봅니다. 
+                        <br> 한번 올려봅니다.
                     </div>
 
                 </div>
@@ -164,20 +172,48 @@
                                 </div>
                             </div>
                             <p>
-                                앗 저 지나가다가 본거 같아요!! 
+                                앗 저 지나가다가 본거 같아요!!
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+
         </div>
 
+    </div>
+
+    <div class="modal hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+            <div class=" container  space-1  ">
+                 <h3>신고 문자 보내기</h3>
+                <div class="g-mb-20">
+                    <label class="g-mb-20" for="name">보내는 이</label>
+                    <input type="text" id="name" name="name" value="스트릿 애니멀 파인더"
+                        class="form-control form-control-md rounded-0" readonly>
+                </div>
+                <form action="" method="get">
+                    <div class="g-mb-20">
+                        <label class="g-mb-20" for="content">내용</label>
+                        <textarea id="content" class="form-control form-control-md rounded-0 "></textarea>
+                    </div>
+                    <div class="text-right center">
+                        <button class="btn btn-primary  rounded-0 closeBtn" type="button">닫기</button>
+                        <button class="btn btn-primary  rounded-0" type="reset">초기화</button>
+                        <button class="btn btn-primary  rounded-0" type="submit">보내기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	62d4bc6d2093029dccfeeaaea8e0f9e8"></script>
 <script>
+
+
+
     var mapContainer = document.getElementById('img'), // 지도를 표시할 div 
         mapOption = {
             center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -201,7 +237,20 @@
     });
 
     // 지도에 원을 표시합니다 
-    circle.setMap(map); 
+    circle.setMap(map);
+
+    // 모달 
+    const open = () => {
+        document.querySelector(".modal").classList.remove("hidden");
+    }
+
+    const close = () => {
+        document.querySelector(".modal").classList.add("hidden");
+    }
+
+    document.querySelector(".openBtn").addEventListener("click", open);
+    document.querySelector(".closeBtn").addEventListener("click", close);
+    document.querySelector(".bg").addEventListener("click", close);
 </script>
 
 </html>

@@ -1,106 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css">
-    <title>main</title>
-  </head>
-  <body>
-    <header
-      id=""
-      class="u-header u-header__sticky-top u-header--toggle-section u-header--change-appearance"
-      style="margin-top: 0px"
-    >
-      <!-- PC 탑바 레이아웃 1-1 -->
-      <div
-        class="u-header__section u-header__section--hidden u-header__section--dark g-bg-white g-transition-0_3 g-pt-10--sm g-pb-0"
-      >
-        <div class="g-hidden-xs-down">
-            <!-- 탑바 레이아웃 3 -->
-          <div class="container">
-            <div class="row flex-md-row justyfy-content-between">
-              <!-- 탑바 left 5-1 -->
-              <div class="col-auto g-px-15">
-                <ul class="list-inline g-mt-minus-10">
-                    <li class="list-inline-item"><a class="g-color-topbar" href="">로그인</a></li>
-                    <li class="list-inline-item g-color-topbar">|</li>
-                    <li class="list-inline-item"><a class="g-color-topbar" href="">회원가입</a></li>
-                    <li class="list-inline-item g-color-topbar">|</li>
-                    <li class="list-inline-item"><a class="g-color-topbar" href="">마이페이지</a></li>
-              </div>
-              <!-- 탑바 right 5-2 -->
-              <div class="col-auto g-pos-rel g-px-15">
-                <ul class="list-inline g-mt-minus-10">
-                  <li class="list-inline-item"><a class="g-color-topbar" href="">로그인</a></li>
-                  <li class="list-inline-item g-color-topbar">|</li>
-                  <li class="list-inline-item"><a class="g-color-topbar" href="">회원가입</a></li>
-                  <li class="list-inline-item g-color-topbar">|</li>
-                  <li class="list-inline-item"><a class="g-color-topbar" href="">마이페이지</a></li>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>스트릿애니멀파인더</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">   
+    $(document).ready( function() {
+
+    $("#headers").load("header.html");  // 원하는 파일 경로를 삽입하면 된다
+    $("#footer").load("footer.html");
+    });
+    </script>
+</head>
+<body>
+    <div id="headers"></div>
+    <section class="announcement_container">
+        <div class="announcement">
+            <div class="announce">
+                <ul class="nav_bar">
+                    <li class="nav_item">
+                        <a href="">공지사항</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="">보도자료</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="">자료실</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="">실시간이슈참여</a>
+                    </li>
                 </ul>
-
-              </div>
+                <div class="contents">
+                    <div class="content">
+                        <p>
+                            <a href="">인수위 게시물의 허위사실 유포에 대해 사실관계...</a>
+                        </p>
+                        <hr class="bottom_line">
+                        <p>
+                            <a href="">인수위 게시물의 허위사실 유포에 대해 사실관계...</a>
+                        </p>
+                        <hr class="bottom_line">
+                        <p>
+                            <a href="">인수위 게시물의 허위사실 유포에 대해 사실관계...</a>
+                        </p>
+                        <hr class="bottom_line">
+                        <p>
+                            <a href="">인수위 게시물의 허위사실 유포에 대해 사실관계...</a>
+                        </p>
+                        <hr class="bottom_line">
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="notice_wrap">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <a href="#"><img src="1.jpg" style="width:100%; height:280px"></a>
+                    </div>
+                        
+                    <div class="mySlides fade">
+                        <a href="#"><img src="2.png" style="width:100%; height:280px"></a>
+                    </div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- 모바일 -->
-      <div></div>
-
-      <!-- 헤더 local nav bar -->
-      <!-- 로고 -->
-      <div class="container container-header header justyfy-content-between">
-      <div class="header-logo">
-        <img src="logo.svg" style="width: 240px; height: 60px;" alt="" class="logo">
-      </div>
-      <!-- 목차 -->
-      <div class="header-menu mouseover" style="margin-left: 321px;" data-animaion-in="fadeIn" data-animation-out="fadeOut">
-        <ul class="mouseover">
-          <li class="list-inline-header">
-            <a href=""style="text-decoration:none; ">소개</a>
-          </li>
-          <li class="list-inline-header">
-            <a href=""style="text-decoration:none; ">실종동물찾기</a>
-            <ul class=" mouseover showmenu list-drop">
-              <li class="hide-list"><a  class="drop-a"href="">동물 등록하기</a></li>
-              <li class="hide-list"><a  class="drop-a"href="">동물 / 주인 찾기</a></li>
-            </ul>
-          </li>
-          <li class="list-inline-header">
-            <a href=""style="text-decoration:none; ">전문가FAQ</a>
-          </li>
-          <li class="list-inline-header">
-            <a href=""style="text-decoration:none; ">커뮤니티</a>
-            <ul class="mouseover showmenu list-drop">
-              <li class="hide-list"><a  class="drop-a"href="">소통해요</a></li>
-              <li class="hide-list"><a  class="drop-a"href="">스애파 후기</a></li>
-            </ul>
-          </li>
-        </ul>
+    <section class="make_change" style="background-color: #00C897;">
+        <div class="ch_tit">
+            <p>함께 만드는 변화</p>
+            <div class="row">
+                <div class="col">
+                    <div class="info">
+                        <a href="#">
+                            <span class="block0">결연후원</span>
+                            <span class="block1">결연은 마음으로 하는 입양입니다.</span>
+                            <span class="block2">
+                                장애나 질병이 있거나 사람을 무서워하는 동물들이 
+                                <span class="block2_1">
+                                    ....
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="gy_container">
+                        
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info">
+                        <a href="#">
+                            <span class="block0">입양하기</span>
+                            <span class="block1">입양 ON 펫숍 OFF</span>
+                            <span class="block2">
+                                동물을 사고 팔지 않는 사회를 만드는데에
+                                <span class="block2_1">
+                                    동참해주세요
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="gy_container">
+                        <div class="gy_container">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info">
+                        <a href="#">
+                            <span class="block0">봉사하기</span>
+                            <span class="block1">사각지대 동물의 곁으로</span>
+                            <span class="block2">
+                                도움의 손길이 필요한 곳, 카라 봉사대가 갑니다.
+                            </span>
+                        </a>
+                    </div>
+                    <div class="gy_container">
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    <div class="lnb-bg showmenu">
-    </div>
-</header>
-<img src="logo.svg" alt="">
 
+        <div class="subs_container">
+            <a href="" class="subs_btn" style="background-color: #6AAAE4;">카라뉴스레터 구독하기</a>
+        </div>
+        
+        <div class="ch_tit">
+            <p>더봄센터 소식</p>
+            <div></div>
+        </div>
+    </section>
 
-    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script type="text/javascript">
-      $(window).load(function(){
-          $(function() {
-              $('.showmenu').hide();
-              $('.mouseover').hover(function() {
-                  $('.showmenu').slideToggle(0.1);
-              }
-         //     , function() {
-          //      $('.showmenu').slideUp(1);
-         //   }
-              );
-           });
-      });
-      </script>
-  </body>
+    <section class="together">
+        <p>함께해주시는 분들</p>
+        <div class="toget_row">
+            <div class="trow_item">
+                <div class="trow_item1"></div>
+                <div class="trow_item1"></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="toget_row">
+            <div class="trow_item"></div>
+        </div>
+    </section>
+
+    <div id="footer"></div>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        showSlides2();
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        function showSlides2() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides2");
+            var dots = document.getElementsByClassName("dot2");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides2, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+</body>
 </html>

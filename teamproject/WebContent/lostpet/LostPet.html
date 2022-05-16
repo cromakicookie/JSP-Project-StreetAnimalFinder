@@ -2,14 +2,23 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="LostPet.css" type="text/css">
+    <link rel="stylesheet" href="/teamproject/WebContent/lostpet/LostPet.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#headers").load("/teamproject/WebContent/header/header.html");  // 원하는 파일 경로를 삽입하면 된다
+            $("#footer").load("/teamproject/WebContent/main/footer.html");
+        });
+    </script>
 </head>
 
 <body>
+    <div id="headers"></div>
     <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall g-bg-cover"
         data-options="{direction: &quot;reverse&quot;, animation_duration: 25, direction: &quot;reverse&quot;}">
         <div class="divimage dzsparallaxer--target w-100 u-bg-overlay g-bg-img-hero g-bg-black-opacity-0_3--after"
-            style="height: 130%; background-image: url(/file/getBlob/130690_90612_406.jpg); transform: translate3d(0px, -90px, 0px);">
+            style="height: 130%; background-image: url(/teamproject/WebContent/file/getBlob/130690_90612_406.jpg); transform: translate3d(0px, -90px, 0px);">
             ::before
             ::after
         </div>
@@ -20,13 +29,14 @@
                 <p class="g-color-white g-font-size-18 g-pb-30">길거리를 돌아다니는 동물들. <br> 그들은 어쩌면 가족을 잃은 것일지도 모릅니다. <br> 당신의
                     도움의 손길이, 그들에게 가족을 되찾아줄 수 있을지도 모릅니다.</p>
                 <div class="row">
-                    <div class="col-4">
-                        <a href="#adopt-process" class="btn btn-md btn-block btn-outline-light g-mr-10 g-mb-15">임시 보호
+                    <!-- <div class="col-4">
+                        <a href="/teamproject/WebContent/find_write/find_write.html"
+                            class="btn btn-md btn-block btn-outline-light g-mr-10 g-mb-15">임시 보호
                             등록</a>
-                    </div>
+                    </div> -->
                     <div class="col-4">
                         <!-- GA 클래스 추가 -->
-                        <a href=""
+                        <a href="/teamproject/WebContent/find_write/find_write.html"
                             class="btn btn-md btn-block btn-primary g-color-white g-mr-10 g-mb-15 g-brd-0 adopt_application_event">
                             내 동물 찾기 <i class="material-icons g-font-size-16">글쓰기</i>
                         </a>
@@ -39,15 +49,15 @@
 
     <!-- 목록 -->
     <div class="container space-1">
-        
+
         <div class="row">
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="LostPet_detail.html">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img1" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="LostPet_detail.html">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -62,11 +72,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="LostPet_detail.html">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img2" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -82,11 +92,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="file/getBlob/23490.png">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img3" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href=/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -101,11 +111,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img4" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -120,11 +130,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img5" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -139,11 +149,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img6" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -158,11 +168,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img7" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -177,11 +187,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img8" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -196,11 +206,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img9" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -215,11 +225,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img10" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -234,11 +244,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img11" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -253,11 +263,11 @@
 
             <div class="col-sm-6 col-md-3 mb-7">
                 <div class="card border-0 shadow-soft h-100">
-                    <a href="">
+                    <a href="/teamproject/WebContent/lostpet/LostPet_detail.html">
                         <div id="img12" class="card-img-top" name="img" style="width:100%;height:220px;"></div>
                     </a>
                     <div class="card-body p-3">
-                        <h2 class="h5 font-weight-bold"><a href="">역삼동 / 개(비글)</a></h2>
+                        <h2 class="h5 font-weight-bold"><a href="/teamproject/WebContent/lostpet/LostPet_detail.html">역삼동 / 개(비글)</a></h2>
                         <p class="text-secondary mb-0">
                             개(비글)<br>
                             수컷 추정(중성화 O)<br>
@@ -274,7 +284,7 @@
     </div>
 
 
-
+    <div id="footer"></div>
 </body>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=	62d4bc6d2093029dccfeeaaea8e0f9e8"></script>
 <script>
